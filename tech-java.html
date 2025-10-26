@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech: Java</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header style="padding:12px 0; border-bottom:1px solid var(--border); background:rgba(0,0,0,0.4); position:sticky; top:0; z-index:10;">
+    <div class="container">
+      <a class="btn" href="index.html#tech-iq">← Back to Tech Stack</a>
+    </div>
+  </header>
+  <main>
+    <section class="morph" aria-labelledby="java-title">
+      <div class="container">
+        <h1 class="section-title" id="java-title">Java • Robust APIs & Clean Architecture</h1>
+        <div class="card" style="padding:14px; display:grid; gap:12px;">
+          <p class="xp-meta">Highlights: RESTful services, layered architecture, unit testing, pagination, validation.</p>
+          <div class="grid-2">
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Interesting Feature</h3>
+              <p>Search with pagination and specification pattern for flexible queries.</p>
+              <pre><code>// Spring Data JPA Specification (snippet)
+public Specification&lt;Contact&gt; hasQuery(String q) {
+  return (r, cq, cb) -&gt; {
+    if (q == null || q.isBlank()) return cb.conjunction();
+    String like = "%" + q.toLowerCase() + "%";
+    return cb.or(
+      cb.like(cb.lower(r.get("name")), like),
+      cb.like(cb.lower(r.get("email")), like)
+    );
+  };
+}
+</code></pre>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Decisions</h3>
+              <ul class="xp-list" style="margin:0;">
+                <li>Thin controllers, business logic in services.</li>
+                <li>DTOs for IO boundaries, Bean Validation for safety.</li>
+                <li>Repository specs to keep queries composable.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ps-actions">
+            <a class="btn primary" href="https://github.com/vedha2507/Contact_Management_App" target="_blank" rel="noopener">Live Demo</a>
+            <a class="btn" href="https://github.com/vedha2507/Contact_Management_App" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

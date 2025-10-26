@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech: MySQL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header style="padding:12px 0; border-bottom:1px solid var(--border); background:rgba(0,0,0,0.4); position:sticky; top:0; z-index:10;">
+    <div class="container">
+      <a class="btn" href="index.html#tech-iq">← Back to Tech Stack</a>
+    </div>
+  </header>
+  <main>
+    <section class="morph" aria-labelledby="mysql-title">
+      <div class="container">
+        <h1 class="section-title" id="mysql-title">MySQL • Structured Data & Indexing</h1>
+        <div class="card" style="padding:14px; display:grid; gap:12px;">
+          <p class="xp-meta">Highlights: normalized schema, covering indexes, EXPLAIN plan checks.</p>
+          <div class="grid-2">
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Schema Snippet</h3>
+              <pre><code>CREATE TABLE contacts (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(180) UNIQUE,
+  phone VARCHAR(30),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_name (name)
+);
+</code></pre>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Decisions</h3>
+              <ul class="xp-list" style="margin:0;">
+                <li>Unique email to prevent duplicates.</li>
+                <li>Index on name to accelerate search.</li>
+                <li>Audit fields for traceability.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ps-actions">
+            <a class="btn" href="https://github.com/vedha2507" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

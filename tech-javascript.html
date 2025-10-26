@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech: JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header style="padding:12px 0; border-bottom:1px solid var(--border); background:rgba(0,0,0,0.4); position:sticky; top:0; z-index:10;">
+    <div class="container">
+      <a class="btn" href="index.html#tech-iq">← Back to Tech Stack</a>
+    </div>
+  </header>
+  <main>
+    <section class="morph" aria-labelledby="js-title">
+      <div class="container">
+        <h1 class="section-title" id="js-title">JavaScript • Interactive UX</h1>
+        <div class="card" style="padding:14px; display:grid; gap:12px;">
+          <p class="xp-meta">Highlights: debounced inputs, DOM updates, accessibility events.</p>
+          <div class="grid-2">
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Interesting Feature</h3>
+              <p>Client-side debounce utility for smooth search.</p>
+              <pre><code>const debounce = (fn, ms) =&gt; { let t; return (...a) =&gt; { clearTimeout(t); t = setTimeout(() =&gt; fn(...a), ms); }; };
+</code></pre>
+              <div class="ps-actions"><button class="btn" id="demoBtn">Try Debounce</button></div>
+              <script>document.addEventListener('DOMContentLoaded',()=>{const d=(f,m)=>{let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),m)}};const log=d(()=>alert('Debounced!'),500);document.getElementById('demoBtn').onclick=log;});</script>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Decisions</h3>
+              <ul class="xp-list" style="margin:0;">
+                <li>Keep utilities pure and testable.</li>
+                <li>Prefer event delegation in dynamic lists.</li>
+                <li>Guard destructive actions with confirm/undo.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ps-actions">
+            <a class="btn" href="https://github.com/vedha2507" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

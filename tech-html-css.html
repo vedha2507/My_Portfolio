@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech: HTML & CSS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header style="padding:12px 0; border-bottom:1px solid var(--border); background:rgba(0,0,0,0.4); position:sticky; top:0; z-index:10;">
+    <div class="container">
+      <a class="btn" href="index.html#tech-iq">← Back to Tech Stack</a>
+    </div>
+  </header>
+  <main>
+    <section class="morph" aria-labelledby="hc-title">
+      <div class="container">
+        <h1 class="section-title" id="hc-title">HTML & CSS • Accessible, Responsive UI</h1>
+        <div class="card" style="padding:14px; display:grid; gap:12px;">
+          <p class="xp-meta">Highlights: semantic markup, CSS grid/flex, prefers-reduced-motion, dark mode.</p>
+          <div class="grid-2">
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Interesting Feature</h3>
+              <p>Adaptive grid that flips columns at custom breakpoints.</p>
+              <pre><code>/* Grid utility */
+.grid-2 { display:grid; grid-template-columns: 1.2fr 0.8fr; gap:18px; }
+@media (max-width: 960px){ .grid-2 { grid-template-columns: 1fr; } }
+</code></pre>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Decisions</h3>
+              <ul class="xp-list" style="margin:0;">
+                <li>Use system fonts for performance.</li>
+                <li>CSS variables for theme control.</li>
+                <li>Reduced motion support by default.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ps-actions">
+            <a class="btn primary" href="#" onclick="alert('Demo placeholder'); return false;">Live Demo</a>
+            <a class="btn" href="https://github.com/vedha2507" target="_blank" rel="noopener">View Code</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>

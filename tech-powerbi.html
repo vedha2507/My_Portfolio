@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech: Power BI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header style="padding:12px 0; border-bottom:1px solid var(--border); background:rgba(0,0,0,0.4); position:sticky; top:0; z-index:10;">
+    <div class="container">
+      <a class="btn" href="index.html#tech-iq">← Back to Tech Stack</a>
+    </div>
+  </header>
+  <main>
+    <section class="morph" aria-labelledby="pbi-title">
+      <div class="container">
+        <h1 class="section-title" id="pbi-title">Power BI • Interactive Analytics</h1>
+        <div class="card" style="padding:14px; display:grid; gap:12px;">
+          <p class="xp-meta">Highlights: slicers, measures, scheduled refresh, storytelling dashboards.</p>
+          <div class="grid-2">
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Interesting Feature</h3>
+              <p>Measure to compute YoY growth with blank-safety.</p>
+              <pre><code>-- DAX
+YoY Growth % = 
+VAR Prev = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))
+RETURN DIVIDE([Total Sales]-Prev, Prev)
+</code></pre>
+            </div>
+            <div class="card" style="padding:14px;">
+              <h3 class="xp-role" style="margin:0 0 8px;">Decisions</h3>
+              <ul class="xp-list" style="margin:0;">
+                <li>Star schema for clarity.</li>
+                <li>Slowly changing dimensions handled upstream.</li>
+                <li>Report themes for consistency.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="ps-actions">
+            <a class="btn" href="https://github.com/vedha2507" target="_blank" rel="noopener">View Artifacts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
